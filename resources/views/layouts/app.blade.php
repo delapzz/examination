@@ -45,18 +45,19 @@
                             </a>
                         </li>  
 
+                       
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Expense Management
+                                </a>
+                        </li>  
                         @endcan
-
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('expenses.index')}}">
                                 Expense
                             </a>
                         </li>  
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Expense Categories
-                            </a>
-                        </li>  
+                       
                         @endguest
                     </ul>
 
