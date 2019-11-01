@@ -64,9 +64,7 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        if(Gate::denies('define-user')){
-            return redirect(route('admin.users.index'));
-        }
+    
         $roles = Role::all();
         return view('admin.users.edit')->with([
             'user' => $user,
@@ -95,9 +93,7 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     { 
-        if(Gate::denies('delete-user')){
-            return redirect(route('admin.users.index'));
-        }
+                
         $user->roles()->detach();
         $user->delete();
         return redirect()->route('admin.users.index');
