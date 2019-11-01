@@ -99,6 +99,7 @@ class UsersController extends Controller
         if (Gate::denies('deletes')) {
             return  redirect(route('admin.users.index'));
          }
+         
         $user->roles()->detach();
         $user->delete();
         return redirect()->route('admin.users.index');
