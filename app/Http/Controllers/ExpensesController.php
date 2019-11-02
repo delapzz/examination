@@ -47,10 +47,9 @@ class ExpensesController extends Controller
             'total' => 'required',
         ]);
    
-        Product::create($request->all());
+        expenses::create($request->all());
     
-        return Redirect::to('expenses.index')
-       ->with('success','Greate! Product created successfully.');
+        return Redirect::to('expenses.index')->with('success','Greate! Product created successfully.');
     }
 
     /**
@@ -72,10 +71,10 @@ class ExpensesController extends Controller
      */
     public function edit(Expenses $expenses)
     {
-        $where = array('id' => $id);
-        $data['category'] = Product::where($where)->first();
+        $where = array('id' => $expenses);
+        $data['category'] = expenses::where($where)->first();
  
-        return view('expenses.edit', $data);
+        return view('expenses.edit', $expenses);
     }
 
     /**
@@ -97,9 +96,9 @@ class ExpensesController extends Controller
             'title' => $request->title, 
             'description' => $request->description];
 
-        expenses::where('id',$id)->update($update);
+        expenses::where('id',$expenses)->update($update);
    
-        return Redirect::to('products')
+        return Redirect::to('expenses.index')
        ->with('success','Great! Product updated successfully');
     }
 

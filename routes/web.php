@@ -16,15 +16,12 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/',function () {
-        return view('home');
-    });
+    Route::get('/','ExpensesController@index');
     
 });
 
 
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::resource('expenses', 'ExpensesController');
 
 Route::namespace('Admin')

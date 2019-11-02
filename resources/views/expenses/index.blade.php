@@ -20,12 +20,12 @@
                               </tr>
                             </thead>
                             
-                                    @foreach ($expenses as $e)
+                                    @foreach ( $expenses  as $e)
                               <tr>
 
                                     <td scope = "row">{{ $e->category }}</td>
                                     <td>{{ $e->total }}</td>
-                                    <td><a href="{{ route('expenses.edit',$e->id)}}" class="btn btn-primary">Edit</a></td>
+                                    <td><a href="{{ route('expenses.edit',$e->id) }}" class="btn btn-primary">Edit</a></td>
                                     <td>
                                     <form action="{{ route('expenses.destroy', $e->id)}}" method="post">
                                      {{ csrf_field() }}
