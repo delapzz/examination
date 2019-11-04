@@ -1,9 +1,10 @@
 @extends('layouts.app')
+
 @section('content')
 <h2 style="margin-top: 12px;" class="text-center">Edit Product</a></h2>
 <br>
  
-<form action="{{ route('expenses.update', $expenses->id) }}" method="POST" name="update_product">
+<form action="{{ route('expenses.edit', $expenses->id) }}" method="POST" name="update_product">
 {{ csrf_field() }}
 @method('PATCH')
  

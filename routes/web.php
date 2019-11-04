@@ -25,7 +25,7 @@ Route:: resource('/users', 'UsersController');
 });
 
 
-Route::resource('expenses', 'ExpensesController');
+Route::resource('/expenses', 'ExpensesController');
 
 });
 
