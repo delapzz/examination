@@ -12,22 +12,21 @@
 */
 Auth::routes();
 
-
-
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/','ExpensesController@index');
-    
-});
-
-
-Route::get('/', 'HomeController@index')->name('home');
-Route::resource('expenses', 'ExpensesController');
+Route::get('/','ExpensesController@index');
 
 Route::namespace('Admin')
 ->prefix('admin')
 ->name("admin.")
 ->middleware("can:admin_manager")
 ->group(function(){
-    Route:: resource('/users', 'UsersController', ['except' => ['show','create','store' ]]);
+Route:: resource('/users', 'UsersController');
 });
+
+
+Route::resource('expenses', 'ExpensesController');
+
+});
+
+
