@@ -5,8 +5,8 @@
 <div class = "row justify-content-center">
 <div class = "col-md-8">
 <div class = "card">
-<div class = "card-header">Expenses</div>
-<a href="{{ route('expenses.create') }}" class="btn btn-success mb-2">Add</a> 
+<div class = "card-header">Expenses <a href="{{ route('expenses.create') }}" class="btn btn-success col-md-2">Add</a> </div>
+
   
                     <div class = "card-body">
 
@@ -25,11 +25,11 @@
 
                                     <td scope = "row">{{ $e->category }}</td>
                                     <td>{{ $e->total }}</td>
-                                    <td><a href="{{ route('expenses.edit',$e->id) }}" class="btn btn-primary">Edit</a>
+                                    <td><a href="{{ route('expenses.edit',$e->id) }}" class="btn btn-primary float-left">Edit</a>
                                     <form action="{{ route('expenses.destroy', $e->id)}}" method="post">
                                      {{ csrf_field() }}
                                      @method('DELETE')
-                                     <button class="btn btn-danger" type="submit">Delete</button>
+                                     <button class="btn btn-danger float-left" type="submit">Delete</button>
                                    </form>
                                    </td>
                               </tr>
