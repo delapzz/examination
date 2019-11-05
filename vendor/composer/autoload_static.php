@@ -417,6 +417,7 @@ class ComposerStaticInitaba1f1db6c500c94e84ab74df175f1a2
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\ExpenseCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExpenseCategoryController.php',
         'App\\Http\\Controllers\\ExpensesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExpensesController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
